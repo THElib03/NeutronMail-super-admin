@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" prefHeight="766.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.martincorp.Interface.TableController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu fx:id="backMenu" mnemonicParsing="true">
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="V" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+               <graphic>
+                  <Label fx:id="backLabel" text="Volver" />
+               </graphic>
+            </Menu>
+            <Menu fx:id="tableMenu" mnemonicParsing="true" text="Tabla">
+               <items>
+                  <MenuItem fx:id="reloadItem" mnemonicParsing="false" text="Recargar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="T" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </Menu>
+            <Menu fx:id="companyMenu" mnemonicParsing="false" text="Empresas">
+               <items>
+                  <MenuItem fx:id="addItem" mnemonicParsing="false" text="Añadir">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="editItem" mnemonicParsing="false" text="Modificar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="deleteItem" mnemonicParsing="false" text="Eliminar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                <MenuItem fx:id="optionItem" mnemonicParsing="false" text="Opciones" />
+                  <MenuItem fx:id="aboutItem" mnemonicParsing="false" text="Acerca de" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idCol" maxWidth="100.0" minWidth="40.0" prefWidth="65.0" text="ID" />
+            <TableColumn fx:id="nameCol" minWidth="80.0" prefWidth="160.0" text="Nombre" />
+            <TableColumn fx:id="passCol" minWidth="300.0" prefWidth="800.0" text="Contraseña (Plain Text)" />
+            <TableColumn fx:id="dateCol" minWidth="60.0" prefWidth="175.0" text="Fecha de Suscripción" />
+         </columns>
+         <contextMenu>
+            <ContextMenu fx:id="contextMenu">
+              <items>
+                <MenuItem fx:id="contextAdd" mnemonicParsing="false" text="Añadir" />
+                  <MenuItem fx:id="contextEdit" mnemonicParsing="false" text="Editar" />
+                  <MenuItem fx:id="contextDelete" mnemonicParsing="false" text="Eliminar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </center>
+</BorderPane>
