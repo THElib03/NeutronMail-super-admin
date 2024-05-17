@@ -22,5 +22,6 @@ Una vez descargado el código e instalados los compiladores, se puede compilar i
 ## Contribuir
 
 ## Licencia
+Este código se rige por la GNU General Public License versión número 3, los detalles de dicha licencia pueden leerse en [LICENSE.TXT](LICENSE.TXT). La principal razón para el uso de esta licencia es evitar la modificación y aprovechamiento por parte de terceros del código con ánimo de lucro, cualquier sugerencia sobre otra licencia que sea más apropiadad y mantenga este código exclusivamente abierto es bienvenida.
 
 ## Contacto
