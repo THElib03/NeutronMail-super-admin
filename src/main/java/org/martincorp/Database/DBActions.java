@@ -39,6 +39,7 @@ public class DBActions {
                                     + "grp_name VARCHAR(60) DEFAULT 'Nuevo Grupo', "
                                     + "grp_pass BLOB NOT NULL, "
                                     + "grp_owner INT, "
+                                    + "grp_creationDate DATE NOT NULL, "
                                     + "CONSTRAINT groupOwner FOREIGN KEY (grp_owner) REFERENCES employee(emp_id) ON UPDATE CASCADE ON DELETE SET NULL "
                                     + ")";
     private final String GROUP_USER_TABLE = "CREATE TABLE groupuser("

@@ -29,7 +29,7 @@ public class Bridge {
     public void startConnection(){
         try{
             //TODO: pick up which DB to connect from settings file (aka add settings).
-            //TODO: change corporativista password to 'cAntANlosQUEyanoESTAn' in all bridges that use this user.
+            //TODO: change corporativista password to cantan_los_que_ya_no_están in all bridges that use this user.
             Class.forName("com.mysql.cj.jdbc.Driver");
             //conn = DriverManager.getConnection
               //  ("jdbc:mysql://neutronmailservice.duckdns.org:3306/" + DBName, "corporativista", "");
@@ -52,12 +52,12 @@ public class Bridge {
             result.close();
         }
         catch (ClassNotFoundException e) {
-            System.out.println("ERROR - "+e.getMessage());
+            System.out.println("ERROR - " + e.getMessage());
 
             connected = false;
         }
         catch (SQLException e) {
-            System.out.println("ERROR - "+e.getMessage());
+            System.out.println("ERROR - " + e.getMessage());
             
             connected = false;
             if(querier != null){
